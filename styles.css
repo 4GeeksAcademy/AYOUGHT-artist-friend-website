@@ -1,0 +1,231 @@
+
+/* GENERAL WEBSITE STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #272321;
+    line-height: 1.5;
+    background: #fffaf5;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible {
+    outline: 3px solid #b45335;
+    outline-offset: 4px;
+}
+
+/* HEADER AND NAVIGATION */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #a7472e;
+}
+
+/* HERO SECTION */
+
+.hero,
+.content-section {
+    min-height: 100vh;
+    min-height: 100svh;
+    scroll-margin-top: 120px;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 72px 24px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.eyebrow {
+    letter-spacing: 3px;
+    color: #a7472e;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.hero-image {
+    flex: 1;
+    width: 45%;
+    max-width: 500px;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    background: #8d3926;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.button:hover {
+    background: #692719;
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    display: flex;
+    align-items: center;
+    padding: 80px 24px;
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.about-section {
+    background: #f3e8dd;
+}
+
+.career-section {
+    background: #fffaf5;
+}
+
+.shows-section {
+    background: #eee2d6;
+}
+
+/* CAREER AND SHOW CARDS */
+
+.career-cards,
+.show-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.career-card,
+.show-card {
+    flex: 1 1 240px;
+    background: white;
+    border: 1px solid #e4d9ce;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* FOOTER */
+
+.site-footer {
+    text-align: center;
+    padding: 30px 24px;
+    background: #272321;
+    color: white;
+}
+
+/* MOBILE PHONE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 10px 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+        padding-top: 48px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+    }
+
+    .content-section {
+        padding: 60px 20px;
+    }
+}
+
+/* ACCESSIBLE MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
